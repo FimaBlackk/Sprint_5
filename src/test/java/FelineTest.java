@@ -41,7 +41,7 @@ public class FelineTest {
         Feline feline = new Feline();
 
         // Проверяем что метод getKittens(int count) возвращает ожидаемое количество котят
-        assertEquals(3, feline.getKittens(3));
+        assertEquals(4, feline.getKittens(4));
     }
 }
 
