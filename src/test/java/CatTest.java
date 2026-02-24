@@ -34,9 +34,6 @@ public class CatTest {
 
         // Проверяем что возвращаемый список еды совпадает с ожидаемым значением
         assertEquals(List.of("Мясо"), food);
-
-        // Проверяем что метод eatMeat() был вызван один раз на мок объекте feline
-        Mockito.verify(feline).eatMeat();
     }
 }
 

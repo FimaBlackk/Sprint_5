@@ -2,6 +2,8 @@ import com.example.Feline;
 import com.example.Lion;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LionParameterizedTest {
@@ -14,7 +16,7 @@ public class LionParameterizedTest {
     })
     public void testDoesHaveMane(String sex, boolean expectedHasMane) throws Exception {
         // Создаем экземпляр класса Lion с заданным полом
-        Lion lion = new Lion(sex, new Feline());
+        Lion lion = new Lion(sex, Mockito.mock(Feline.class));
 
         // Проверяем соответствует ли результат ожиданиям
         assertEquals(expectedHasMane, lion.doesHaveMane());
